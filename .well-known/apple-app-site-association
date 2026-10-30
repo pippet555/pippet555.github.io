@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["3KCAP67WS2.com.champagne555.pippet"],
+        "components": [
+          { "/": "/visit/", "comment": "A friend's pet coming to stay" },
+          { "/": "/visit", "comment": "Same, without the trailing slash" },
+          { "/": "/note/", "comment": "A note about your pet's visit" },
+          { "/": "/note", "comment": "Same, without the trailing slash" }
+        ]
+      }
+    ]
+  }
+}
