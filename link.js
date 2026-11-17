@@ -16,6 +16,7 @@
       open: "Open in Pippet",
       get: "Get Pippet on the App Store",
       about: "Pippet is a tiny pet for your iPhone and Apple Watch.",
+      after: "Just got Pippet? Come back here and tap “Open in Pippet” — {name} brings a present for you both.",
       broken: "This link looks broken. Ask your friend to send it again.",
       species: { sprout: "Sprout", bloom: "Bloom", blossom: "Blossom", sunny: "Sunny", frosty: "Frosty" }
     },
@@ -28,6 +29,7 @@
       open: "Открыть в Pippet",
       get: "Скачать Pippet в App Store",
       about: "Pippet — крошечный питомец для iPhone и Apple Watch.",
+      after: "Только что установил Pippet? Вернись сюда и нажми «Открыть в Pippet» — {name} принесёт подарок вам обоим.",
       broken: "Ссылка повреждена. Попроси друга прислать её ещё раз.",
       species: { sprout: "Росток", bloom: "Цветик", blossom: "Сакура", sunny: "Солнышко", frosty: "Снежок" }
     },
@@ -40,6 +42,7 @@
       open: "Pippet-те ашу",
       get: "Pippet-ті App Store-дан жүктеу",
       about: "Pippet — iPhone мен Apple Watch-қа арналған кішкентай дос.",
+      after: "Pippet-ті жаңа орнаттың ба? Осында қайтып келіп, «Pippet-те ашу» түймесін бас — {name} екеуіңе де сыйлық әкеледі.",
       broken: "Сілтеме бүлінген. Досыңнан қайта жіберуін сұра.",
       species: { sprout: "Өскін", bloom: "Гүлжан", blossom: "Сакура", sunny: "Күнекей", frosty: "Аяз" }
     },
@@ -52,6 +55,7 @@
       open: "在 Pippet 中打开",
       get: "在 App Store 获取 Pippet",
       about: "Pippet 是住在 iPhone 和 Apple Watch 上的小宠物。",
+      after: "刚装好 Pippet？回到这里点「在 Pippet 中打开」——{name} 会给你们俩都带来礼物。",
       broken: "链接好像坏了。请朋友再发一次。",
       species: { sprout: "小芽", bloom: "小花", blossom: "樱樱", sunny: "小阳", frosty: "小霜" }
     }
@@ -103,6 +107,7 @@
     var name = clean(data.n);
     title.textContent = fill(t.visitTitle, { name: name });
     body.textContent = fill(t.visitBody, { species: t.species[data.s] || t.species.sprout });
+    document.getElementById("after").textContent = fill(t.after, { name: name });
   } else {
     var guest = clean(data.n), host = clean(data.h);
     title.textContent = fill(t.noteTitle, { host: host });
